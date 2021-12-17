@@ -1,0 +1,21 @@
+# Ignore the Yukkuri's folders
+00-*
+Resource
+
+# Ignore the proxy directory
+proxy
+
+# Ignore the update files
+git-commit
+
+# Ignore the Reference folders
+Reference/00-*
+
+# Ignore the pyinstaller's folders
+__pycache__
+build
+dist
+*.spec
+
+# Don't ignore ico
+#!YMM_logo.ico
