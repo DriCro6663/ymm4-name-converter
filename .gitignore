@@ -17,5 +17,7 @@ build
 dist
 *.spec
 
+readme-imgs
+
 # Don't ignore ico
 #!YMM_logo.ico
