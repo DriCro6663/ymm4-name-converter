@@ -18,8 +18,12 @@ However, it did not support "[new kitune style](http://www.nicotalk.com/charasoz
 
 I hope it will help people who are making slow videos with [YMM4](https://manjubox.net/ymm4/).
 
+Download it from [Release](https://github.com/DriCro6663/ymm4-name-converter/releases).
+
 # Overview
 This is a program to make the eye and mouth images of slow images downloadable from [nicotalk](http://www.nicotalk.com/charasozai.html) compatible with [YMM3](https://manjubox.net/ymm3/) to [YMM4](http://www.nicotalk.com/charasozai.html).
+
+Download it from [Release](https://github.com/DriCro6663/ymm4-name-converter/releases).
 
 |  YMM3  |   YMM4   | State                     |
 | :----: |  :----:  | :----                     |
@@ -32,85 +36,60 @@ This is a program to make the eye and mouth images of slow images downloadable f
 
 # Usage
 
-1. Move Y3toY4-name-converter.exe to the directory where the slow folder is located.
+0. Download it from [Release](https://github.com/DriCro6663/ymm4-name-converter/releases) and extract the folder.
 
-````
-# Example tree
-/Chara's
-|-- QH-style_Hakurei_Reimu
-|-- Kitune-style_Seija
-|   |-- Eyes
-|   |-- Mouth
-|   |-- Other_folders
-|-- New-Kitune-style-Alice
-|-- Y3toY4-name-converter.exe
-````
-
-2. Run Y3toY4-name-converter.exe. When it is executed, the following string will be output. Please select the folder to be used for YMM4 by using numbers.
-
-```
-# Example
-Current directory: D:\Chara's
-
-YMM4 に対応させるフォルダ名を選んでください．
-Select the folder name that corresponds to YMM4.
-00: QH-style_Hakurei_Reimu
-01: Kitune-style_Seija
-02: New-Kitune-style-Alice
-
-数字を入力して下さい．
-Please enter a number.
-Ex. 1 or 01:
-```
-
-3. After selecting a folder, select the type of slow. If it is not "New Fox" or "QH", select "00: Original".
-
-```
-# Example
-数字を入力して下さい．
-Please enter a number.
-Ex. 1 or 01: 1
-[Kitune-style_Seija] を選択しました．
-Select [Kitune-style_Seija]
-
-改名するゆっくりのタイプを選択してください．
-Select the Yukkuri type of renaming.
-
-00: 元祖　　　　: Original
-01: 新きつね式　: New Kitune Type
-02: QH式　　　　: QH Type
-
-数字を入力して下さい．
-Please enter a number.
-Ex. 1 or 01:
-```
-
-4. After entering the numbers, if there are no problems with the conditions, the renaming of the file will begin.
-
-```
-# Example
-数字を入力して下さい．
-Please enter a number.
-Ex. 1 or 01: 0
-[元祖: Original] を選択しました．
-Select [元祖: Original]
-
-改名を開始します．
-Start renaming.
-改名完了
-Renaming completed.
-```
-
-5. After the process is complete, "Selected_folder_name-YMM4" will be created.
+1. Go to the unzipped folder and slowly put the material folder into the [01-新きつね], [02-QH], and [03-Other] folders.
 
 ```
 # Example tree
-/Chara's
-|-- QH-style_Hakurei_Reimu
-|-- Kitune-style_Seija
-|-- Kitune-style_Seija-YMM4
-|-- New-Kitune-style-Alice
-|-- Y3toY4-name-converter.exe
+/ymm4-name-converter
+|-- 01-新きつね
+|   |-- New-Kitune-Alice
+|-- 02-QH
+|   |-- QH-Reimu
+|-- 03-Other
+|   |-- Kitune-Seija
+|   |   |-- Eyes
+|   |   |-- Mouth
+|   |   |-- Other
+|-- 10-result
+|-- dist
+|   |-- Y3toY4-name-converter
+|   |   |-- 01-新きつね
+|   |   |-- 02-QH
+|   |   |-- 03-Other
+|   |   |-- 10-result
+|-- Y3toY4-name-converter.bat <= [Quick Ver.]
+|-- Y3toY4-name-converter.exe <= [OneFile Ver.]
+```
+
+2. Run [Y3toY4-name-converter.exe] or [Y3toY4-name-converter.bat]. the difference between exe Ver. and bat Ver. is as follows.
+
+
+* exe: An executable file that includes the modules used. <br>
+    Merit: A single executable file. <br>
+    Demerit: Execution speed is slower than bat Ver.
+* bat: Separate modules and executables for use. <br>
+    Merit: Faster execution than exe Ver. <br>
+    Demerit: It is associated with a large number of files.
+
+3. After execution, a slow material folder for YMM4 will be created in the [10-results] folder.
+
+```
+# Example tree
+/ymm4-name-converter
+|-- 01-新きつね
+|   |-- New-Kitune-Alice
+|-- 02-QH
+|   |-- QH-Reimu
+|-- 03-Other
+|   |-- Kitune-Seija
+|-- 10-result
+|   |-- QH-Reimu-YMM4
+|   |-- Kitune-Seija-YMM4
+|   |-- New-Kitune-Alice-YMM4
+|-- Y3toY4-name-converter.bat <= [Quick Ver.]
+|-- Y3toY4-name-converter.exe <= [OneFile Ver.]
 ```
 
 # BuildTheEnvironment
@@ -196,6 +175,9 @@ The distribution of this program may be terminated without notice.
 
 # Updates
 
+* 2022/01/07: <br>
+Improved one-click name change. <br>
+From the folder that supports YMM3, improved to allow one-click renaming [folder that supports YMM4](https://manjubox.net/ymm4/faq/%E7%AB%8B%E3%81%A1%E7%B5%B5%E6%A9%9F%E8%83%BD/%E5%8B%95%E3%81%8F%E7%AB%8B%E3%81%A1%E7%B5%B5%E7%B4%A0%E6%9D%90%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/)
 * 2021/12/19: <br>
 For all buns, completed and First commit
 

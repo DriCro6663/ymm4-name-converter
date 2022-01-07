@@ -15,8 +15,12 @@ ymm4-name-converter
 
 これから、[YMM4](https://manjubox.net/ymm4/) でゆっくり動画を制作する人たちの助けになれば幸いです。
 
+[Release](https://github.com/DriCro6663/ymm4-name-converter/releases) からダウンロードしてください。
+
 # 概要
 [nicotalk](http://www.nicotalk.com/charasozai.html) からダウンロードできるゆっくり画像の目や口の画像を [YMM3](https://manjubox.net/ymm3/) -> [YMM4](https://manjubox.net/ymm4/) に対応させるプログラムです。
+
+[Release](https://github.com/DriCro6663/ymm4-name-converter/releases) からダウンロードしてください。
 
 |  YMM3  |   YMM4   | State                 |
 | :----: |  :----:  | :----                 |
@@ -28,85 +32,59 @@ ymm4-name-converter
 | 05.png | 00.png   | 口や目が開いた状態    |
 
 # 使い方
-1. Y3toY4-name-converter.exe を、ゆっくりフォルダがあるディレクトリに移動させてください。
+0. [Release](https://github.com/DriCro6663/ymm4-name-converter/releases) からダウンロードしてフォルダを解凍してください。
+
+1. 解凍したフォルダに移動して、[01-新きつね], [02-QH], [03-Other] フォルダにゆっくり素材フォルダを入れてください。
 
 ```
 # Example tree
-/Chara's
-|-- QH式博麗霊夢
-|-- きつね式正邪
-|   |-- 目
-|   |-- 口
-|   |-- その他のフォルダ
-|-- 新きつね式ありす
-|-- Y3toY4-name-converter.exe
+/ymm4-name-converter
+|-- 01-新きつね
+|   |-- 新きつね式ありす
+|-- 02-QH
+|   |-- QH式博麗霊夢
+|-- 03-Other
+|   |-- きつね式正邪
+|   |   |-- 目
+|   |   |-- 口
+|   |   |-- その他のフォルダ
+|-- 10-result
+|-- dist
+|   |-- Y3toY4-name-converter
+|   |   |-- 01-新きつね
+|   |   |-- 02-QH
+|   |   |-- 03-Other
+|   |   |-- 10-result
+|-- Y3toY4-name-converter.bat <= [Quick Ver.]
+|-- Y3toY4-name-converter.exe <= [OneFile Ver.]
 ```
 
-2. Y3toY4-name-converter.exe を実行してください。実行すると以下のような文字列が出力されますので、YMM4 に対応させるフォルダを数字で選択してください。
+2. [Y3toY4-name-converter.exe] または、[Y3toY4-name-converter.bat] を実行してください。exe Ver. と bat Ver. の違いは以下の通りです。
 
-```
-# Example
-Current directory: D:\Chara's
+* exe Ver.: 使用モジュールを含めた実行ファイル <br>
+    利点：単独の実行ファイル <br>
+    欠点： bat Ver. よりも実行速度が遅い
+* bat Ver.: 使用モジュールと実行ファイルが分かれている <br>
+    利点： exe Ver. よりも実行測度が速い <br>
+    欠点：大量のファイルと関係付けられている
 
-YMM4 に対応させるフォルダ名を選んでください．
-Select the folder name that corresponds to YMM4.
-00: QH式博麗霊夢
-01: きつね式正邪
-02: 新きつね式ありす
-
-数字を入力して下さい．
-Please enter a number.
-Ex. 1 or 01:
-```
-
-3. フォルダを選択後、ゆっくりのタイプを選んでください。「新きつね式」・「QH 式」以外であれば、「00: 元祖: Original」を選択してください。
-
-```
-# Example
-数字を入力して下さい．
-Please enter a number.
-Ex. 1 or 01: 1
-[きつね式正邪] を選択しました．
-Select [きつね式正邪]
-
-改名するゆっくりのタイプを選択してください．
-Select the Yukkuri type of renaming.
-
-00: 元祖　　　　: Original
-01: 新きつね式　: New Kitune Type
-02: QH式　　　　: QH Type
-
-数字を入力して下さい．
-Please enter a number.
-Ex. 1 or 01:
-```
-
-4. 数字を入力後、条件に問題が無ければ、ファイル名の改名が始まります。
-
-```
-# Example
-数字を入力して下さい．
-Please enter a number.
-Ex. 1 or 01: 0
-[元祖: Original] を選択しました．
-Select [元祖: Original]
-
-改名を開始します．
-Start renaming.
-改名完了
-Renaming completed.
-```
-
-5. 処理完了後、「選択したフォルダ名-YMM4」が作成されます。
+3. 実行後、[10-result] フォルダに YMM4 用のゆっくり素材フォルダが作成されます。
 
 ```
 # Example tree
-/Chara's
-|-- QH式博麗霊夢
-|-- きつね式正邪
-|-- きつね式正邪-YMM4
-|-- 新きつね式ありす
-|-- Y3toY4-name-converter.exe
+/ymm4-name-converter
+|-- 01-新きつね
+|   |-- 新きつね式ありす
+|-- 02-QH
+|   |-- QH式博麗霊夢
+|-- 03-Other
+|   |-- きつね式正邪
+|-- 10-result
+|   |-- QH式博麗霊夢-YMM4
+|   |-- きつね式正邪-YMM4
+|   |-- 新きつね式ありす-YMM4
+|-- Y3toY4-name-converter.bat <= [Quick Ver.]
+|-- Y3toY4-name-converter.exe <= [OneFile Ver.]
 ```
 
 # 環境構築
@@ -192,6 +170,9 @@ pyinstaller main.py --name [fileName] --onefile --icon [./img/icon.ico] --nocons
 
 # 更新情報
 
+* 2022/01/07: <br>
+ワンクリックで改名できるように改良 <br>
+YMM3 に対応したフォルダから [YMM4 に対応したフォルダ](https://manjubox.net/ymm4/faq/%E7%AB%8B%E3%81%A1%E7%B5%B5%E6%A9%9F%E8%83%BD/%E5%8B%95%E3%81%8F%E7%AB%8B%E3%81%A1%E7%B5%B5%E7%B4%A0%E6%9D%90%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/)に出力するように改良
 * 2021/12/19: <br>
 全ての饅頭に対応・完成・First commit
 
